@@ -1,0 +1,13 @@
+---
+const { fondo = "#F6F3EC" } = Astro.props;
+---
+
+<div class="bloque" style={`background: ${fondo}`}>
+  <slot />
+</div>
+
+<style>
+  .bloque {
+    padding: 2.25rem 1.75rem;
+  }
+</style>

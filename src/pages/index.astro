@@ -1,16 +1,67 @@
 ---
+import Bloque from "../components/Bloque.astro";
+
+const nombre = "[Loreto Morales]";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{nombre} · Acupuntura</title>
+  </head>
+  <body style="margin: 0%;">
+    <div class="mainbody">
+      <Bloque fondo="#F6F3EC">
+        <h2>¿Qué es la acupuntura?</h2>
+        <p>[Texto]</p>
+      </Bloque>
+
+      <Bloque fondo="#FFFFFF">
+        <h2>¿Qué es la acupuntura?</h2>
+        <p>[Texto]</p>
+      </Bloque>
+      <Bloque fondo="#E9EDE6">
+        <h2>Sobre Mi</h2>
+        <p>[Texto]</p>
+      </Bloque>
+
+      <Bloque>
+        <h2>Contacto</h2>
+        <a
+          class="contact-button"
+          href="https://wa.me/56934074690"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Escribir por WhatsApp
+        </a>
+      </Bloque>
+    </div>
+  </body>
 </html>
+
+<style>
+  .mainbody {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  :global(h2) {
+    color: #3f5f50;
+  }
+
+  .contact-button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 2rem;
+    background-color: #3f5f50;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .contact-button:hover {
+    background-color: #344f42;
+  }
+</style>
